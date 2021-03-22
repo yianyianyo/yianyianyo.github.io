@@ -2,149 +2,104 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-		<title>課堂作業03(B2A41陳儀安)</title>
+		<title>課堂作業04(B2A41陳儀安)</title>
 	<style>
+		@font-face {
+			font-family: MyFont01;
+			src: url('宗楷體.ttf');
+		}
+		@font-face {
+			font-family: MyFont02;
+			src: url('竹風體01.ttf');
+			src: url('竹風體02.ttf');
+		}
 		div {
-			margin: 15px;
+			margin: 5px;
 			text-align: justify;
-			line-height: 30px;
 		}
-		h2 {
-			color: #caa940;
+		.box1 {
+			width:20%;
+			float: right;
+			height: 150px;
+			border-color: red;
+			border-style:solid;
+			border-width: 1px;
+			font-family: MyFont01;
 		}
-		h3 {
-			color: blue;
+		.box2 {
+			width:20%;
+			float: right;
+			height: 150px;
+			border-color: yellow;
+			border-style:double;
+			border-width: 2px;
+			font-family: MyFont02;
 		}
-		img {
-			width: 70%;
+		.box3 {
+			width:20%;
+			float: right;
+			height: 150px;
+			border-color: blue;
+			border-style: dashed;
+			border-width: 3px;
+			font-family: MyFont02;
 		}
-		span {
-			color: salmon;
-			font-weight: bolder;
+		.box4 {
+			width:20%;
+			float: right;
+			height: 150px;
+			border-color: green;
+			border-style:dotted;
+			border-width: 4px;
+			font-family: MyFont01;
 		}
-		table {
-			border-color: dodgerblue;
+		.box5 {
+			width:20%;
+			float: left;
+			height: 150px;
+			border-color: purple;
+			border-style:solid;
+			border-width: 1px;
+			font-family: MyFont02;
 		}
-		th {
-			text-align: center;
-			color: brown;
+		.box6 {
+			width:20%;
+			float: left;
+			height: 150px;
+			border-color: salmon;
+			border-style:double;
+			border-width: 2px;
+			font-family: MyFont01;
 		}
-		tr {
-			text-align: center;
+		.box7 {
+			width:20%;
+			float: left;
+			height: 150px;
+			border-color: lightblue;
+			border-style: dashed;
+			border-width: 3px;
+			font-family: MyFont01;
 		}
-		td {
-			vertical-align: middle;
+		.box8 {
+			width:20%;
+			float: left;
+			height: 150px;
+			border-color: orange;
+			border-style: dotted;
+			border-width: 4px;
+			font-family: MyFont01;
 		}
-	</style>
-</head>
-	<body>
-        <h2>【夏日芒果大賞】一次搞懂所有芒果品種</h2>
-		<div>住在寶島台灣，最幸福的事就是有好多芒果可以吃！</div>
-		<div>但在芒芒果海中，要挑選哪一種芒果呢～ 今天來個【一張圖搞懂芒果品種】</div>
-		<h3>夏日芒果圖鑑</h3>
-		<div><table border="1" width ="90%" cellspacing="0" cellpadding="0">
-			<tr>
-				<th>品種</th>
-				<th>
-					<div>
-						<img src="table_pic/pic01.jpg">
-					</div>
-				</th>
-				<th>
-					<div>
-						<img src="table_pic/pic02.jpg">
-					</div>
-				</th>
-				<th>
-					<div>
-						<img src="table_pic/pic03.jpg">
-					</div>
-				</th>
-				<th>
-					<div>
-						<img src="table_pic/pic04.jpg">
-					</div>
-				</th>
-				<th>
-					<div>
-						<img src="table_pic/pic05.jpg">
-					</div>
-				</th>
-				<th>
-					<div>
-						<img src="table_pic/pic06.jpg">
-					</div>
-				</th>
-				<th>
-					<div>
-						<img src="table_pic/pic07.jpg">
-					</div>
-				</th>
-			</tr>
-			<tr>
-				<td>口感</td>
-				<td>細緻肉厚</td>
-				<td>細緻多汁</td>
-				<td>Ｑ彈紮實</td>
-				<td>綿密細緻</td>
-				<td>細緻肉厚</td>
-				<td>Ｑ彈</td>
-				<td>Ｑ彈</td>
-			</tr>
-			<tr>
-				<td>甜度</td>
-				<td>高</td>
-				<td>清爽甜</td>
-				<td>高</td>
-				<td>超高</td>
-				<td>高</td>
-				<td>甜中帶酸</td>
-				<td>甜中微酸</td>
-			</tr>
-			<tr>
-				<td>特色</td>
-				<td>濃郁香氣</td>
-				<td>水蜜桃香</td>
-				<td>龍眼口味</td>
-				<td>迷人果香</td>
-				<td>濃郁芒果香</td>
-				<td>淡雅香氣</td>
-				<td>清爽香氣</td>
-			</tr>
-		</table>
-	</div>
-	<h3>愛文芒果（lrwin）</h3>
-		<div>愛文芒果是台灣光復後從美國佛羅里達州引進的品種，因為適合台灣的氣候，且濃郁的香氣及滑順的口感最受台灣人喜愛，</div>
-		<div>成為台灣最廣泛種植的品種。果型飽滿、顏色紅艷、甜而不膩，口感Q彈、果香濃郁，</div>
-		<div>全方位的優點讓愛文深受大家喜愛，許多人吃過一次就直接愛上！</div>
-	<h3>水蜜桃芒果</h3>
-		<div>水蜜桃芒果又稱紅龍芒果，當熟成時，蒂頭處會散發一股水蜜桃的香氣，因而得名。</div>
-		<div>水蜜桃芒果的果形與愛文相比略長，美麗的果皮黃紅交融，散發一股迷人的水蜜桃香氣，十分討喜！</div>
-		<div>其果肉細緻多汁，儘管甜度不是最高，滋味卻相當清爽柔和，全台種植的量不多，是非常稀少的品種！</div>
-	<h3>烏香芒果</h3>
-		<div>烏香芒果、又稱黑香，早在日治時期引入台灣，但不適應台灣環境氣候，目前仍只有少量種植。</div>
-		<div>烏香芒果果實為深綠色，在成熟後果實軟化，但不會轉色。甜度高、口感Ｑ彈，最大的特色就是龍眼香氣，</div>
-		<div>目前在台產量稀少，是限定的美味，想品嘗體驗的農粉趕緊試試看！</div>
-	<h3>貴妃芒果</h3>
-		<div>貴妃芒果又名紅金龍，是由台南南化果樹產銷班黃班長改良的新品種芒果，甜度最高可達20度，且果實重量可達到一公斤，</div>
-		<div>細緻綿密的口感與特有的清香是貴妃芒果最大的特色。果粒大、果核小，果肉紮實細密，口感香甜多汁，連紅綠相間的果皮也別具特色，聲名遠播到日本，</div>
-		<div>許多日本人遠道而來就是為了親自品嘗貴妃芒果的美味，但我們在台灣就能享受到，誠心推薦給愛吃甜的農粉們。</div>
-	<h3>夏雪芒果</h3>
-		<div>高雄農改場在1986年，培育出「高雄3號 夏雪芒果」，集各家芒果的優點於一身，</div>
-		<div>以土芒果為母本，果型中等，散發土芒果香氣，同時又有金煌芒果甜度與愛文口感，</div>
-		<div>被世人譽為「芒果界的LV」！</div>
-	<h3>凱特芒果 (Keitt)</h3>
-		<div>同樣是在台灣光復後從美國佛羅里達州引進的品種凱特，屬於晚熟的品種，</div>
-		<div>產期可延至晚秋農曆九月，又稱九月檨，果實大而圓，果肉橙黃、肉質較扎實，甜中帶酸，</div>
-		<div>喜歡酸甜滋味的朋友們就選凱特吧！</div>
-	<h3>金煌芒果</h3>
-		<div>1966年時，台灣的農民黃金煌先生花了八年時間，以凱特為父本、印度的懷特為母本雜交，</div>
-		<div>選育出的芒果品種「金煌芒果」，有著凱特的碩大體型，以及懷特的細緻口感，且抗病性高，</div>
-		<div>連總統蔣經國吃完後都讚不絕口，且金黃色的果皮煞是好看，果型碩大如木瓜，</div>
-		<div>果肉不只細緻、纖維稀少，特別的口感也非常不錯。</div>
-	<div></div>
-	<h2>下次選芒果時不會再霧煞煞了吧！！</h2>
-		<h3>資料來源：</h3>	
-		<div><a href="https://greenbox.tw/Blog/BlogPostNew/6057/" target="_blank">【夏日芒果大賞】一次搞懂所有芒果品種</a></div>
+		<div>
+			<divclass="box1">1.要知道，不論你是感到受傷或興奮，那個感覺都是在你內的，他人或外在的事物不是你的感覺之成因。</div>
+			<divclass="box2">2.不要總是期待好事發生，你的工作就是：無論發生什麼事，都去寬恕。</div>
+			<divclass="box3">3.這世界存在的真正目的，是給你一個修正自己「不信」的機會。</div>
+			<divclass="box3">4.在你的自由內，沒有任何人能夠阻擋你放下恐懼與不安。</div>
+		</div>
+		<div>
+			<divclass="box5>5.你的情緒導向系統是對準愛的，所以任何缺乏愛的經驗，都會給你負面的情緒回饋。</div>
+			<divclass="box6>6.喜悅是你的本質，它是你的本我在沒有制約的狀況下所散發的感覺。</div>
+			<divclass="box7>7.凡是對結局肯定不疑的人，才可能毫不焦慮地耐心等候。</div>
+			<divclass="box8>8.在上帝的世界裡，問題不是靠方法去「解決」，而是經由確立「態度」去「決定」的。 </div>
+		</div>
 	</body>
 </html>
