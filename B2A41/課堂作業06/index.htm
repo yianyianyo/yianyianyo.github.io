@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
 	<meta charset="UTF-8">
 	<title>課堂作業06(B2A41陳儀安)</title>
@@ -27,13 +28,13 @@
 	<button onclick="shoppingInfo()"><h4>我要結帳</h4></button>
 	<div id="demo"></div>
 	<script>
-		function shoppingInfo(){
-			var x = document.getElementById("form01")
+		function shoppingInfo() {
+			var x = document.getElementById("form01");
 			var item ="";
 			var price =0;
-			var text = <h4>您的購物資訊如下:</h4>;
+			var text = "<h4>您的購物資訊如下:</h4>";
 			var i;
-			for (i=0; i<5; i++){
+			for (i = 0; i < 5; i++) {
 				switch(i){
 					case 0:
 						item ="姓名:";
@@ -61,10 +62,11 @@
 						case 7:price=749;break;
 					}
 					text +="水果種類:" + x.elements[i].value+"<br>";
-					text +="價格合計:" + price + "元<br>"
+					text +="價格合計:" + price + "元<br>";
 				}
-				document.getElementById("demo").innerHTML=text;
+				document.getElementById("demo").innerHTML = text;
 			}
+		}
 	</script>
 	</body>
 </html>
