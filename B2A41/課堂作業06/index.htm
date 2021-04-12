@@ -24,7 +24,7 @@
 		<input type="radio" name="fruit" id="fruit02" value="有機木瓜(6台斤)">有機木瓜(6台斤) 435元<br>
 		<input type="radio" name="fruit" id="fruit03" value="黑鑽石桑葚(5台斤)">黑鑽石桑葚(5台斤) 749元<br>
 	</form>
-	<button onclick="shoppingInfo()"><h4>結帳</h4></button>
+	<button onclick="shoppingInfo()"><h4>我要結帳</h4></button>
 	<div id="demo"></div>
 	<script>
 		function shoppingInfo(){
@@ -35,7 +35,7 @@
 			var i;
 			for (i=0; i<5; i++){
 				switch(i){
-					case 0;
+					case 0:
 						item ="姓名:";
 						break;
 					case 1:
@@ -51,7 +51,7 @@
 						item ="指定送貨日期:";
 						break;
 				}
-				text+ = item+x.elements[i].value + "<br>";
+				text += item + x.elements[i].value + "<br>";
 			}
 			for (i=5; i<=7; i++){
 				if(x.elements[i].checked == true){
