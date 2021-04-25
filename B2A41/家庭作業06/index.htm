@@ -59,23 +59,20 @@
                 case 4:
                     item = "指定送貨日期: ";
                     break;
-				case 5:
-                    item = "指定送貨日期: ";
-                    break;
             }
             text += "<td>" + item + "</td>" + "<td>" + x.elements[i].value +"</td>";
             text += "</tr>";
         }
 
 
-        for (i=6; i<=9; i++) {
+        for (i=5; i<=9; i++) {
             if(x.elements[i].checked == true){
                 switch(i){
-                    case 6: price=1080; break;
-                    case 7: price=765; break;
-                    case 8: price=200; break;
-					case 9: price=180; break;
-					case 10: price=345; break;
+                    case 5: price=1080; break;
+                    case 6: price=765; break;
+                    case 7: price=200; break;
+					case 8: price=180; break;
+					case 9: price=345; break;
                 }
                 text += "<tr><td>商品種類: </td>" + "<td>" + x.elements[i].value + "</td></tr>";
                 text += "<tr><td>價格合計: </td>" + "<td>" + price + "元</td><tr>";
