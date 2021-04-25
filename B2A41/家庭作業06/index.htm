@@ -26,11 +26,11 @@
 		<input type="radio" name="item" id="item02" value="J. Herbin 1670 紀念瓶墨水 50ml 海洋藍(1罐)">J. Herbin 1670 紀念瓶墨水 50ml 海洋藍(1罐) 765元<br>
 		<input type="radio" name="item" id="item03" value="PLATINUM 白金牌 鋼筆吸墨器金色(1支)">PLATINUM 白金牌 鋼筆吸墨器金色(1支) 200元<br>
 		<input type="radio" name="item" id="item04" value="UCHIDA水性代針筆0.05+0.2+0.4+0.8+Brush(5支1包)">UCHIDA水性代針筆0.05+0.2+0.4+0.8+Brush(5支1包) 180元<br>
-		<input type="radio" name="item" id="item05" value="JIAGO A6活頁綁帶手帳本(1本)">JIAGO A6活頁綁帶手帳本(1本) ˇˋ345元<br>
+		<input type="radio" name="item" id="item05" value="JIAGO A6活頁綁帶手帳本(1本)">JIAGO A6活頁綁帶手帳本(1本) 345元<br>
 	
 </form>
 
-<button onclick="shoppingInfo()"><h4>我要結帳！</h4></button>
+<button multiclick="shoppingInfo()"><h4>我要結帳！</h4></button>
 <div id="demo"></div>
 <script>
     function shoppingInfo() {
@@ -59,6 +59,15 @@
                 case 4:
                     item = "指定送貨日期: ";
                     break;
+				case 5:
+                    item = "指定送貨日期: ";
+                    break;
+				case 6:
+                    item = "指定送貨日期: ";
+                    break;
+				case 7:
+                    item = "指定送貨日期: ";
+                    break;
             }
             text += "<td>" + item + "</td>" + "<td>" + x.elements[i].value +"</td>";
             text += "</tr>";
@@ -68,9 +77,9 @@
         for (i=5; i<=7; i++) {
             if(x.elements[i].checked == true){
                 switch(i){
-                    case 5: price=475; break;
-                    case 6: price=435; break;
-                    case 7: price=749; break;
+                    case 5: price=200; break;
+                    case 6: price=180; break;
+                    case 7: price=345; break;
                 }
                 text += "<tr><td>商品種類: </td>" + "<td>" + x.elements[i].value + "</td></tr>";
                 text += "<tr><td>價格合計: </td>" + "<td>" + price + "元</td><tr>";
