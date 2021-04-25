@@ -6,11 +6,12 @@
 	<title>家庭作業06(B2A41陳儀安)</title>
 	<style>
 		h4 {
-			color:red;
-		}
-		div{
-			color: blue;
-			margin: 5px;
+            color: red;
+        }
+
+        div {
+            color: blue;
+            margin: 5px;
 		}
 	</style>
 </head>
@@ -26,49 +27,62 @@
 		<input type="radio" name="item" id="item03" value="PLATINUM 白金牌 鋼筆吸墨器金色(1支)">PLATINUM 白金牌 鋼筆吸墨器金色(1支) 200元<br>
 		<input type="radio" name="item" id="item04" value="UCHIDA水性代針筆0.05+0.2+0.4+0.8+Brush(5支1包)">UCHIDA水性代針筆0.05+0.2+0.4+0.8+Brush(5支1包) 180元<br>
 		<input type="radio" name="item" id="item05" value="JIAGO A6活頁綁帶手帳本(1本)">JIAGO A6活頁綁帶手帳本(1本) ˇˋ345元<br>
-	</form>
-	<button onclick="shoppingInfo()"><h4>我要結帳</h4></button>
-	<div id="demo"></div>
-	<script>
-		function shoppingInfo() {
-			var x = document.getElementById("form01");
-			var item ="";
-			var price =0;
-			var text = "<h4>您的購物資訊如下:</h4>";
-			var i;
-			for (i = 0; i < 5; i++) {
-				switch(i){
-					case 0:
-						item ="姓名:";
-						break;
-					case 1:
-						item ="收件住址:";
-						break;
-					case 2:
-						item ="電話:";
-						break;
-					case 3:
-						item ="電子郵件:";
-						break;
-					case 4:
-						item ="指定送貨日期:";
-						break;
-				}
-				text += item + x.elements[i].value + "<br>";
-			}
-			for (i=5; i<=7; i++){
-				if(x.elements[i].checked == true){
-					switch(i){
-						case 5:price=475;break;
-						case 6:price=435;break;
-						case 7:price=749;break;
-					}
-					text +="商品種類:" + x.elements[i].value+"<br>";
-					text +="價格合計:" + price + "元<br>";
-				}
-				document.getElementById("demo").innerHTML = text;
-			}
-		}
-	</script>
-	</body>
+	
+</form>
+
+<button onclick="shoppingInfo()"><h4>我要結帳！</h4></button>
+<div id="demo"></div>
+<script>
+    function shoppingInfo() {
+        var x = document.getElementById("form01");
+        var item = "";
+        var price = 0;
+        var text = "<h4>您的購物資訊如下:</h4>";
+        var i;
+        text += "<table border='1' width='90%' cellspacing='0' cellpadding='0'>";
+
+        for (i = 0; i < 5; i++) {
+            text += "<tr>";
+            switch (i) {
+                case 0:
+                    item = "姓名: ";
+                    break;
+                case 1:
+                    item = "收件住址: ";
+                    break;
+                case 2:
+                    item = "電話: ";
+                    break;
+                case 3:
+                    item = "電子郵件: ";
+                    break;
+                case 4:
+                    item = "指定送貨日期: ";
+                    break;
+            }
+            text += "<td>" + item + "</td>" + "<td>" + x.elements[i].value +"</td>";
+            text += "</tr>";
+        }
+
+
+        for (i=5; i<=7; i++) {
+            if(x.elements[i].checked == true){
+                switch(i){
+                    case 5: price=475; break;
+                    case 6: price=435; break;
+                    case 7: price=749; break;
+                }
+                text += "<tr><td>商品種類: </td>" + "<td>" + x.elements[i].value + "</td></tr>";
+                text += "<tr><td>價格合計: </td>" + "<td>" + price + "元</td><tr>";
+            }
+            text += "</tr>";
+        }
+
+        text += "</table>";
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+
+</body>
+
 </html>
