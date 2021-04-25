@@ -29,8 +29,7 @@
 		<input type="radio" name="item" id="item05" value="JIAGO A6活頁綁帶手帳本(1本)">JIAGO A6活頁綁帶手帳本(1本) 345元<br>
 	
 </form>
-
-<button oneclick="shoppingInfo()"><h4>我要結帳！</h4></button>
+<button onclick="shoppingInfo()"><h4>結帳</h4></button>
 <div id="demo"></div>
 <script>
     function shoppingInfo() {
@@ -72,7 +71,7 @@
                     case 6: price=765; break;
                     case 7: price=200; break;
 					case 8: price=180; break;
-					case 9: price=345; break;
+					case 9: price=375; break;
                 }
                 text += "<tr><td>商品種類: </td>" + "<td>" + x.elements[i].value + "</td></tr>";
                 text += "<tr><td>價格合計: </td>" + "<td>" + price + "元</td><tr>";
