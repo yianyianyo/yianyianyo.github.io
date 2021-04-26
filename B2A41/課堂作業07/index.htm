@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>家庭作業05(B2A41陳儀安)</title>
+	<style>
+		h4 {
+            color: red;
+        }
+
+        div {
+            color: blue;
+            margin: 5px;
+		}
+	</style>
+</head>
+	<body>
+	<form id="form01">
+		姓名:<input type="text" name="name01" value="陳儀安"><br>
+		收件住址: <input type="text" name="address01" value="新北市三重區大智街136號4樓"><br>
+		電話:<input type="tel" name="tel01" value="0972890132"><br>
+		電子郵件:<input type="email" name="email01" value="yianyianyo@gmail.com"><br>
+		指定送貨日期:<input type="date" name="date01"><br>
+		商品種類:<br><input type="radio" name="item" id="item01" value="LAMY SAFARI 狩獵者系列 2021限量復刻版 鋼筆(1支)">LAMY SAFARI 狩獵者系列 2021限量復刻版 鋼筆(1支) 1080元<br>
+		<input type="radio" name="item" id="item02" value="J. Herbin 1670 紀念瓶墨水 50ml 海洋藍(1罐)">J. Herbin 1670 紀念瓶墨水 50ml 海洋藍(1罐) 765元<br>
+		<input type="radio" name="item" id="item03" value="PLATINUM 白金牌 鋼筆吸墨器金色(1支)">PLATINUM 白金牌 鋼筆吸墨器金色(1支) 200元<br>
+		<input type="radio" name="item" id="item04" value="UCHIDA水性代針筆0.05+0.2+0.4+0.8+Brush(5支1包)">UCHIDA水性代針筆0.05+0.2+0.4+0.8+Brush(5支1包) 180元<br>
+		<input type="radio" name="item" id="item05" value="JIAGO A6活頁綁帶手帳本(1本)">JIAGO A6活頁綁帶手帳本(1本) 345元<br>
+	
+</form>
+<button onclick="shoppingInfo()"><h4>結帳</h4></button>
+<div id="demo"></div>
+<script>
+    function shoppingInfo() {
+        var x = document.getElementById("form01");
+        var item = "";
+        var price = 0;
+        var text = "<h4>您的購物資訊如下:</h4>";
+        var i;
+        text += "<table border='1' width='90%' cellspacing='0' cellpadding='0'>";
+
+        for (i = 0; i < 5; i++) {
+            text += "<tr>";
+            switch (i) {
+                case 0:
+                    item = "姓名: ";
+                    break;
+                case 1:
+                    item = "收件住址: ";
+                    break;
+                case 2:
+                    item = "電話: ";
+                    break;
+                case 3:
+                    item = "電子郵件: ";
+                    break;
+                case 4:
+                    item = "指定送貨日期: ";
+                    break;
+            }
+            text += "<td>" + item + "</td>" + "<td>" + x.elements[i].value +"</td>";
+            text += "</tr>";
+        }
+
+
+        for (i=5; i<=9; i++) {
+            if(x.elements[i].checked == true){
+                switch(i){
+                    case 5: price=1080; break;
+                    case 6: price=765; break;
+                    case 7: price=200; break;
+					case 8: price=180; break;
+					case 9: price=375; break;
+                }
+                text += "<tr><td>商品種類: </td>" + "<td>" + x.elements[i].value + "</td></tr>";
+                text += "<tr><td>價格合計: </td>" + "<td>" + price + "元</td><tr>";
+            }
+            text += "</tr>";
+        }
+
+        text += "</table>";
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+
+</body>
+
+</html>
