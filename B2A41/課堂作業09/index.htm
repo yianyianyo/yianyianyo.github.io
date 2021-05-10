@@ -38,7 +38,7 @@ span{
     </form>
   
 <script>
-    var x=document.getElementById("form01");
+    var x = document.getElementById("form01");
     let input = document.querySelector('input')
     let textarea = document.querySelector('textarea');
     var lineNo = 0;
@@ -47,14 +47,15 @@ span{
     var m1;
     var newString="";
     function printReg(lineNo, newString){
-        text+= "...";
-        for (i = lineNo-15;i <= lineNo + 20;i++){
-            if ((i>=lineNo)&&(i<=lineNo+reg.length-1)){
+        text += "...";
+        for (i = lineNo-15; i <= lineNo + 20;i++){
+            if ((i>=lineNo) && (i<= lineNo + reg.length -1)){
                 text += newString[i];
-            }else{
-                text +="...<br>";
+            } else{
+                text +=newString[i];
             }
         }
+        text += "...<br>";
     }
     input.addEventListener('change',() => {
         var files = input.files;
