@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-	<meta charset="UTF-8">
-	<title>課堂作業08(B2A41陳儀安)</title>
+	<title>課堂作業09(B2A41陳儀安)</title>
+    <meta charset="="UTF-8>
 </head>
 <style type="text/css">
     div{
@@ -25,7 +25,7 @@ span{
 }
 </style>
 <body>
-    <h3 style="color: blue; text-align:center">
+    <h3 style="color: blue; text-align: center">
         開啟檔案後，字串搜尋
     </h3>
     <div>
@@ -34,15 +34,29 @@ span{
     </div>
     <div id="demo"></div>
     <form id="form01">
-        輸入字串:<input type="text" name="query01" value="嘆息"><br>
+        輸入字串:<input type="text" name="query01" value="成績"><br>
     </form>
+  
 <script>
     var x=document.getElementById("form01");
     let input = document.querySelector('input')
     let textarea = document.querySelector('textarea');
     var lineNo = 0;
-    var text = ""
-    input.addEventListener('change',()=>{
+    var text = "";
+    var reg = /成績/g;
+    var m1;
+    var newString="";
+    function printReg(lineNo, newString){
+        text+= "...";
+        for (i = lineNo-15;i <= lineNo + 20;i++){
+            if ((i>=lineNo)&&(i<=lineNo+reg.length-1)){
+                text += newString[i];
+            }else{
+                text +="...<br>";
+            }
+        }
+    }
+    input.addEventListener('change',() => {
         var files = input.files;
         if (files.length ==0) return;
         const file = files[0];
@@ -51,14 +65,14 @@ span{
             const file = e.target.result;
             const lines = file.split(/\r\n|\n/);
             textarea.value = lines.join('\n');
-            var reg = new RegExp(x.elements[0].value);
-            lineNo = textarea.value.search(reg);
-            text += "所搜尋的字串:「"+reg+"」出現在第"+ lineNo + "個字<br>";
-            text += "...<br>";
-            for (i = lineNo-10; i <= lineNo + 15;i++){
-                text += textarea.value[i];
+            newString = textarea.value.substr(reg.lastIndex);
+            while((m1 = reg.exec(newString)) !== null){
+                lineNo = newString.search(reg);
+                text += "<span>「"+m1[0]+"」"+"在第" + newString.search(reg)+ "個字</span>";
+                printReg(lineNo,newString);
+                text += "<br>";
+                newString = newString.substr(reg.lastIndex);
             }
-            text += "...<br>";
             document.getElementById("demo").innerHTML = text;
         };
         reader.onerror = (e) => alert(e.target.error.name);
