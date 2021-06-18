@@ -115,7 +115,7 @@
 				resizeContents      : true, // If true, solitary images/objects in the panel will expand to fit the viewport
 				navigationSize      : 3,     // Set this to the maximum number of visible navigation tabs; false to disable
 				navigationFormatter : function(index, panel){ // Format navigation labels with text
-					return ['課堂07', '課堂10', '家庭06'][index - 1];
+					return ['課堂07', '課堂07', '課堂11'][index - 1];
 				},
 				onSlideBegin: function(e,slider) {
 					// keep the current navigation tab in view
@@ -133,22 +133,21 @@
 <body id="main">
 
 	<div id="page-wrap">
-		<h1 style="color: purple";>網頁設計作品回顧</h1>
+		<h1 style="color: green";>網頁設計作品回顧</h1>
 			<br><br>
 			<ul id="slider2">
 				<li class="panel1">
 					<div>
 						<div class="textSlide">
-							<a href="https://kcwang1962.github.io/html/課堂作業07">
-							<img src="images/pic07.jpg" alt="pic07" style="float: right; margin: 0 0 2px 10px; width: 375px; height: 250px;" />
+							<a href="https://yianyianyo.github.io/B2A41/課堂作業05">
+							<img src="images/PIC01.png" alt="pic07" style="float: right; margin: 0 0 2px 10px; width: 375px; height: 250px;" />
 							</a>
-							<h2 style="color: blue";>07-javascript物件應用</h2>
+							<h2 style="color: blue";>05-javascript入門</h2>
 							<h3 style="color: red; font-weight:bold;">學習重點</h3>
 							<h3>
 							<ul>
-								<li>Javascript物件的概念</li>
-								<li>HTML表單的數字輸入</li>
-								<li>學習購物網站的介面設計</li>
+								<li>Javascript語法與結構</li>
+								<li>Javascript函數</li>
 							</ul>
 							</h3>
 						</div>
@@ -158,18 +157,32 @@
 				<li class="panel2">
 					<div>
 						<div class="textSlide">
-							<a href="https://kcwang1962.github.io/html/課堂作業10">
-								<img src="images/pic10.jpg" alt="pic10" style="float: right; margin: 0 0 2px 10px; width: 375px; height: 250px;" />
+							<a href="https://yianyianyo.github.io/B2A41/課堂作業07">
+								<img src="images/PIC02.png" alt="pic10" style="float: right; margin: 0 0 2px 10px; width: 375px; height: 250px;" />
 							</a>
-							<h2 style="color: blue";>10-jQuery應用01</h2>
+							<h2 style="color: blue";>07-javascript物件應用</h2>
 							<h3 style="color: red; font-weight:bold;">學習重點</h3>
 							<h3>
 								<ul>
-									<li>jQurey基礎入門</li>
-									<li>jQurey的事件與特效</li>
-									<li>練習形狀變化與位移</li>
+									<li>Javascript物件的概念</li>
+									<li>HTML表單的數字輸入欄</li>
+									<li>學習購物網站的介面設計</li>
 								</ul>
 							</h3>
+							<body>
+								<form id="form01">
+									姓名:<input type="text" name="name01" value="陳儀安"><br>
+									收件住址: <input type="text" name="address01" value="新北市三重區大智街136號4樓"><br>
+									電話:<input type="tel" name="tel01" value="0972890132"><br>
+									電子郵件:<input type="email" name="email01" value="yianyianyo@gmail.com"><br>
+									指定送貨日期:<input type="date" name="date01"><br>
+									水果種類:<br><input type="checkbox" name="fruit" id="fruit01" value="愛文芒果(1箱)">愛文芒果(1箱) 475元;
+									購買數量:<input type="number" name="number01"><br>
+									<input type="checkbox" name="fruit" id="fruit02" value="有機木瓜(6台斤)">有機木瓜(6台斤) 435元;
+									<input type="number" name="number02"><br>
+									<input type="checkbox" name="fruit" id="fruit03" value="黑鑽石桑葚(5台斤)">黑鑽石桑葚(5台斤) 749元;
+									<input type="number" name="number03"><br>
+								</form>
 						</div>
 					</div>
 				</li>
@@ -177,15 +190,15 @@
 				<li class="panel3">
 					<div>
 						<div class="textSlide">
-							<a href="https://kcwang1962.github.io/html/課堂作業12">
-								<img src="images/pic12.jpg" alt="pic12" style="float: right; margin: 0 0 2px 10px; width: 375px; height: 250px;" />
+							<a href="https://yianyianyo.github.io/B2A41/課堂作業11">
+								<img src="images/PIC03.png" alt="pic12" style="float: right; margin: 0 0 2px 10px; width: 375px; height: 250px;" />
 							</a>
-							<h2 style="color: blue";>12-skitter</h2>
+							<h2 style="color: blue";>11-jQuery應用02</h2>
 							<h3 style="color: red; font-weight:bold;">學習重點</h3>
 							<h3>
 								<ul>
-									<li>skitter套件應用</li>
-									<li>多樣的轉場變化應用</li>
+									<li>jQurey的事件與特效(mouseover&mouseleave的應用)</li>
+									<li>jQuery的設置屬性 attr()</li>
 								</ul>
 							</h3>
 						</div>
